@@ -1,0 +1,20 @@
+{% extends 'layouts/base.html' %}
+{% block title %}Index Page{% endblock %}
+
+
+{%block content %}
+<h1>Hello Home Page</h1>
+<h2>{{ id }}</h2>
+<h2>{{ name }}</h2>
+<h2>{{ email }}</h2>
+{% if id == '001' %}
+<h2>Access ok!</h2>
+{% else %}
+<h2>Wrong!</h2>
+{% endif %}
+
+<a href="{% url 'myapp:home' id=50 %}">Go home</a><br />
+<a href="{% url 'myapp:article' year=2022 slug='boss-bam' %}">Go article</a><br />
+<a href="{% url 'book:index' %}">Go book page</a><br />
+
+{% endblock %}

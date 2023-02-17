@@ -1,1 +1,1 @@
-# Django-test-code
+# Django-test
